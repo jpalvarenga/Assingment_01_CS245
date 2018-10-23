@@ -197,10 +197,16 @@ public class Assignment1Test {
 	 */
 	public static void main(String[] args) {
 		
-		Assignment1Test timing = new Assignment1Test(50000);
+		Assignment1Test timing = new Assignment1Test(3000);
+		int [] sizes = {50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000};
+		// int [] sizes = {5, 10};
 		
-		timing.printSortingTiming();
-		System.out.println("----------------------------------------------------");
+		for (int size : sizes) {
+			timing.changeArraySize(size);
+			// timing.printStatus();
+			timing.printSortingTiming();
+			System.out.println("----------------------------------------------------");
+		}
 		
 	}
 
